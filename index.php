@@ -14,12 +14,10 @@
             $city = $_POST['city'];
 
 
-            $data = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=".$city."&appid=cbe439ed5d7e9fd4dee89b0183fa437d");
+            $data = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=".$city."&appid=541b41214bebf06c6c1a8dd8c8eea349");
 
 
             $weather = json_decode($data, true);
-
-            // print_r($weather['cod']);
 
             $tempInCel = intval($weather['main']['temp'] - 273);
 
